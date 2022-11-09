@@ -13,6 +13,7 @@ function App() {
   return (
     <>
     <Router>
+      <Header/>
         <Routes>
           <Route exact path="/" element={<Login />}></Route>
           <Route path="/login" element={<Login />}></Route>

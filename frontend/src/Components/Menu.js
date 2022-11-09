@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Container, Button } from "reactstrap";
 import { useNavigate,useLocation } from "react-router-dom";
 import axios from "axios";
+import Login from "./Login";
 
 const Menu = () => {
   const navigate = useNavigate();
@@ -62,9 +63,16 @@ const Menu = () => {
     })
   
   };
+  useEffect(() => {
+    if(!localStorage.getItem("customer_number")){
+      navigate("/login");
+    }
+  }, [])
+  
   
   const { state } = useLocation();
   const branch_names = state;
+  
   return (
     
     <Container
