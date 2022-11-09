@@ -21,8 +21,6 @@ public class Loan {
 	@EmbeddedId
 	private MyKey myKey;
 	private int loan_amount;
-//	@ManyToOne
-//	private Branch branch;
 	public MyKey getMyKey() {
 		return myKey;
 	}
@@ -46,7 +44,6 @@ public class Loan {
 	}
 	public Loan() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	

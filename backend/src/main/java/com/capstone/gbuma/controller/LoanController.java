@@ -20,6 +20,8 @@ public class LoanController {
 	
 	@Autowired
 	private LoanService loanService;
+	
+	/*save loan details to loan table*/
 	@PostMapping("/addloan")
 	public ResponseEntity<?> addloan(@RequestBody Loan loan) {
 		System.out.println(loan);

@@ -12,6 +12,8 @@ public class AccountServiceImpl implements AccountService {
 
 	@Autowired
 	private AccountRepository accountRepo;
+	
+	/*get accounts for given customer*/
 	@Override
 	public List<Account> getAccounts(String customer_number) {
 		return accountRepo.findByCustomerNumber(customer_number);

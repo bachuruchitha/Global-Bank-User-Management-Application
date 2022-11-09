@@ -11,9 +11,10 @@ import java.util.List;
 public class BranchServiceImpl implements BranchService {
     @Autowired
     private BranchRepo branchRepo;
+    
+    /*get branches in which customer have account*/
     @Override
 	public List<Branch> getBranches(String customer_number) {
-
 		return branchRepo.findBranches(customer_number);
 	}
 }

@@ -21,6 +21,7 @@ public class BranchController {
     @Autowired
     private BranchService branchService;
 
+    /* get all branches for given customer*/
     @GetMapping("/getBranches")
 	public ResponseEntity<List<Branch>> getBranches(@RequestParam String customer_number) {
 		System.out.println("Customer" + customer_number);

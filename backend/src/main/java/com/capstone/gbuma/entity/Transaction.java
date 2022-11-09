@@ -120,13 +120,6 @@ public class Transaction {
 		// TODO Auto-generated constructor stub
 	}
 	
-//	@Override
-//	public String toString() {
-//		return "Transaction [transaction_number=" + transaction_number + ", account_number=" + account_number
-//				+ ", date_of_transaction=" + date_of_transaction + ", medium_of_transaction=" + medium_of_transaction
-//				+ ", transaction_type=" + transaction_type + ", transaction_amount=" + transaction_amount + ", account="
-//				+ account + "]";
-//	}
 
 	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)

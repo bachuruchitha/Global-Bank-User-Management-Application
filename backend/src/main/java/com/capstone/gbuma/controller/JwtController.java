@@ -43,7 +43,6 @@ public class JwtController {
         catch(BadCredentialsException e) {
             e.printStackTrace();
             System.out.println("Erroer here"+loginRequest.getCustomer_number()+" "+loginRequest.getPassword());
-//            throw new Exception("Bad Credentials");
             return ResponseEntity.ok(null);
         }
         UserDetails userDetails = this.customUserDetailsService.loadUserByUsername(loginRequest.getCustomer_number());

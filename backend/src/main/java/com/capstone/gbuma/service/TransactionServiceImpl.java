@@ -23,7 +23,6 @@ public class TransactionServiceImpl implements TransactionService {
 
 	@Override
 	public List<Transaction> viewTransaction(String account_number, String fromDate, String toDate,String transaction_type) {
-//		System.out.println(transactionRepo.getAllTransactionsByPeriod(account_number, Date.valueOf(fromDate), Date.valueOf(toDate)));
 		return transactionRepo.getAllTransactionsByPeriod(account_number, Date.valueOf(fromDate), Date.valueOf(toDate),transaction_type);
 	}
 

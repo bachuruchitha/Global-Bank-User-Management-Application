@@ -28,6 +28,7 @@ public class CustomerController {
 	@Autowired
 	private AccountService accountService;
 
+	/* Check if customer is already registered if registered return null else add to customer table*/ 
 	@PostMapping("/register")
 	public ResponseEntity<Customer> register(@RequestBody Customer customer) {
 		System.out.println(customer);
@@ -39,7 +40,8 @@ public class CustomerController {
 			return new ResponseEntity<Customer>(customerService.saveCustomer(customer), HttpStatus.OK);
 		}
 	}
-
+	
+	/*Check if customer has account*/
 	@GetMapping("/accountExist")
 	public ResponseEntity<Boolean> getAccountHolders(@RequestParam String customer_number) {
 		return new ResponseEntity<Boolean>(accountService.getAccounts(customer_number).size()>0, HttpStatus.OK);

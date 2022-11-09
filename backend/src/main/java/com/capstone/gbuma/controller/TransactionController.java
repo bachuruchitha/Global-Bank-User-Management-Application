@@ -23,12 +23,16 @@ public class TransactionController {
 	
 	@Autowired
 	private TransactionService transactionService;
+	
+	/*add transaction data to transaction table*/
 	@PostMapping("/addtransaction")
 	public ResponseEntity<Transaction> addTransaction(@RequestBody Transaction transaction){
+		
 		return new ResponseEntity<Transaction>(transactionService.addTransaction(transaction),HttpStatus.OK);
 		
 	}
 	
+	/*view transactions for given time period*/
 	@GetMapping("/viewTransactions")
 	public ResponseEntity<List<Transaction>> viewTransactions(@RequestParam String account_number,@RequestParam String fromDate,@RequestParam String toDate,@RequestParam String transaction_type){
 		System.out.println(fromDate+" +"+ toDate);
